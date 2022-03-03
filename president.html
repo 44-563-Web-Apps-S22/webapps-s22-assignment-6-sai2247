@@ -17,9 +17,6 @@
     <input type="button" onclick="checkGuess()" value="Check the guess">
 </form>
 
-
-<p id="result">This text will be replaced </p>
-
 <script> 
 
 function checkGuess (){
@@ -42,6 +39,34 @@ function checkGuess (){
     }
 }
 </script>
+<p id="result">This text will be replaced </p>
+
+<label>Image changes on click</label><br>
+    <div class="container">
+        <img src="Dove.jpg" class="rounded" id="image" alt="Avocet" style="height: 100px;width: 100px;" onclick="swapImage()">
+    </div>
+
+    <script>
+        let useImage = 1;
+        function swapImage() {
+            switch (useImage) {
+                case 1:
+                    document.getElementById("image").src = "emu.jpg";
+                    useImage = 2;
+                    break;
+                case 2:
+                    document.getElementById("image").src = "sparrow.jpg";
+                    useImage = 3;
+                    break;
+                case 3:
+                    document.getElementById("image").src = "Dove.jpg";
+                    useImage = 1;
+                    break;
+                default:
+                    break;
+            }
+        }
+    </script>
 
 </body>
 </html> 
